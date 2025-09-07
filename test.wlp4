@@ -1,0 +1,17 @@
+int wain(int* a, int b) {
+  int* copy = NULL;
+  int i = 0;
+  int j = 0;
+  int* useless = NULL;
+  while(i < 32) {
+    useless = new int[1023];
+    j = 0;
+    while(j < 1023) {
+      *(useless+j) = i*j;
+      j=j+1;
+    }
+    delete [] useless;
+    i = i+1;
+  }
+  return 0;
+}
